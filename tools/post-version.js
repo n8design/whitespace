@@ -19,4 +19,4 @@ const solutionContents = JSON.parse(solutionFileContent);
 
 solutionContents.solution.version = nextVersion;
 
-fs.writeFileSync(JSON.stringify(solutionContents), null, 2);
+fs.writeFileSync(JSON.stringify(solutionContents, null, 2), 'UTF-8');
