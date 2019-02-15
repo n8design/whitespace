@@ -9,6 +9,8 @@ import { Dialog } from '@microsoft/sp-dialog';
 
 import * as strings from 'N8DWhiteSpaceApplicationCustomizerStrings';
 
+import { SPComponentLoader } from '@microsoft/sp-loader';
+
 const LOG_SOURCE: string = 'N8DWhiteSpaceApplicationCustomizer';
 
 import styles from './N8DWhiteSpaceApplicationCustomizer.module.scss';
@@ -20,7 +22,6 @@ import { escape } from '@microsoft/sp-lodash-subset';
  * You can define an interface to describe it.
  */
 export interface IN8DWhiteSpaceApplicationCustomizerProperties {
-  Top: string;
   Bottom: string;
 }
 
@@ -30,12 +31,18 @@ export interface IN8DWhiteSpaceApplicationCustomizerProperties {
 export default class N8DWhiteSpaceApplicationCustomizer
   extends BaseApplicationCustomizer<IN8DWhiteSpaceApplicationCustomizerProperties> {
 
-  private _topPlaceholder: PlaceholderContent | undefined;
   private _bottomPlaceholder: PlaceholderContent | undefined;
+
+  public constructor(){
+    super();
+
+  }
 
   @override
   public onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
+
+
 
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
 
@@ -44,44 +51,9 @@ export default class N8DWhiteSpaceApplicationCustomizer
   }
 
   private _renderPlaceHolders(): void {
-    console.log("HelloWorldApplicationCustomizer._renderPlaceHolders()");
-    console.log(
-      "Available placeholders: ",
-      this.context.placeholderProvider.placeholderNames
-        .map(name => PlaceholderName[name])
-        .join(", ")
-    );
 
-    // Handling the top placeholder
-    if (!this._topPlaceholder) {
-      this._topPlaceholder = this.context.placeholderProvider.tryCreateContent(
-        PlaceholderName.Top,
-        { onDispose: this._onDispose }
-      );
-
-      // The extension should not assume that the expected placeholder is available.
-      if (!this._topPlaceholder) {
-        console.error("The expected placeholder (Top) was not found.");
-        return;
-      }
-
-      if (this.properties) {
-        let topString: string = this.properties.Top;
-        if (!topString) {
-          topString = "(Top property was not defined.)";
-        }
-
-        if (this._topPlaceholder.domElement) {
-          this._topPlaceholder.domElement.innerHTML = `
-                <div class="${styles.app}">
-
-                        <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(
-            topString
-          )}
-                </div>`;
-        }
-      }
-    }
+    SPComponentLoader.loadCss('//raw.githubusercontent.com/n8design/whitespace/blacklist/blacklist.css');
+    SPComponentLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 
     // Handling the bottom placeholder
     if (!this._bottomPlaceholder) {
@@ -104,10 +76,7 @@ export default class N8DWhiteSpaceApplicationCustomizer
 
         if (this._bottomPlaceholder.domElement) {
           this._bottomPlaceholder.domElement.innerHTML = `
-                <div class="${styles.app}">
-                        <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(
-            bottomString
-          )}
+                <div class="${styles.app}">blabla
                 </div>`;
         }
       }
