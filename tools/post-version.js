@@ -1,5 +1,5 @@
 console.log(this);
-console.log(process);
+console.log(process.argv);
 
 const fs = require('fs');
 const path = require('path');
