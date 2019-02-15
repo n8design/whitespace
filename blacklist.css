@@ -1,4 +1,4 @@
-    // get mobile app
+    /* get mobile app */
     a[href*='https://aka.ms/getspmteamcommsite'] {
         display: none;
     }
