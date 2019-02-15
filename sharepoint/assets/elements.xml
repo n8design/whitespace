@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="N8DWhiteSpace"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="78478cf9-373a-4b36-950c-ce02224fc0c3"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+</Elements>
