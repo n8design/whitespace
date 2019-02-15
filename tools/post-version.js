@@ -1,5 +1,5 @@
 // version have been passed in
-if(process.argv.length !== 3){
+if (process.argv.length !== 3) {
   console.log('ERROR: No version have been passed in.');
 }
 
@@ -19,4 +19,7 @@ const solutionContents = JSON.parse(solutionFileContent);
 
 solutionContents.solution.version = nextVersion;
 
-fs.writeFileSync(JSON.stringify(solutionContents, null, 2), 'UTF-8');
+fs.writeFileSync(
+  solution,
+  JSON.stringify(solutionContents, null, 2),
+  'UTF-8');
