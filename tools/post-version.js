@@ -15,4 +15,8 @@ const solution = './config/package-solution.json';
 const package = './package.json';
 
 const solutionFileContent = fs.readFileSync(solution, 'UTF-8');
-const packageFileContent = fs.readFileSync(package, 'UTF-8');
+const solutionContents = JSON.parse(solutionFileContent);
+
+solutionContents.solution.version = nextVersion;
+
+fs.writeFileSync(JSON.stringify(solutionContents), null, 2);
