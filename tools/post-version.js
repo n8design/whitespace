@@ -1,5 +1,11 @@
-console.log(this);
-console.log(process.argv);
+// version have been passed in
+if(process.argv.length !== 3){
+  console.log('ERROR: No version have been passed in.');
+}
+
+const nextVersion = process.argv[2].substr(1);
+console.log(nextVersion);
+
 
 const fs = require('fs');
 const path = require('path');
