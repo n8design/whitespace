@@ -1,0 +1,13 @@
+    // get mobile app
+    a[href*='https://aka.ms/getspmteamcommsite'] {
+        display: none;
+    }
+
+    // remove simple footer advertising
+    div[data-automationid="SimpleFooter"] {
+        display: none;
+    }
+
+    div[class*="teamifyBanner"] {
+        display: none;
+    }
