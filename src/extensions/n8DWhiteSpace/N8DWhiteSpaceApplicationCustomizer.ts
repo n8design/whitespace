@@ -52,8 +52,8 @@ export default class N8DWhiteSpaceApplicationCustomizer
 
   private _renderPlaceHolders(): void {
 
-    SPComponentLoader.loadCss('//raw.githubusercontent.com/n8design/whitespace/blacklist/blacklist.css');
-    SPComponentLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
+    SPComponentLoader.loadCss('https://n8design.github.io/whitespace/blacklist.css');
+    // SPComponentLoader.loadCss('https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 
     // Handling the bottom placeholder
     if (!this._bottomPlaceholder) {
@@ -76,7 +76,7 @@ export default class N8DWhiteSpaceApplicationCustomizer
 
         if (this._bottomPlaceholder.domElement) {
           this._bottomPlaceholder.domElement.innerHTML = `
-                <div class="${styles.app}">blabla
+                <div class="${styles.app}">
                 </div>`;
         }
       }

@@ -1,4 +1,11 @@
 .app {
   height: 0;
-  background-color: lime;
+}
+
+:global {
+
+  div[class^="simpleFooterContainer"] {
+    display: none;
+  }
+
 }
