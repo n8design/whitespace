@@ -3,7 +3,7 @@ if(process.argv.length !== 3){
   console.log('ERROR: No version have been passed in.');
 }
 
-const nextVersion = process.argv[2].substr(1);
+const nextVersion = process.argv[2].substr(0);
 console.log(nextVersion);
 
 
