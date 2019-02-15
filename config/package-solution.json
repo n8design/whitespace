@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "whitespace-client-side-solution",
+    "name": "N8DWhiteSpace",
     "id": "e41f7104-3220-4ddf-a700-c3b88ee4006a",
     "version": "0.0.1",
     "includeClientSideAssets": true,
@@ -11,13 +11,7 @@
         "title": "Application Extension - Deployment of custom action.",
         "description": "Deploys a custom action with ClientSideComponentId association",
         "id": "b39cc6a5-969f-4bb8-aed5-2af07bc79db4",
-        "version": "1.0.0.0",
-        "assets": {
-          "elementManifests": [
-            "elements.xml",
-            "clientsideinstance.xml"
-          ]
-        }
+        "version": "0.0.1.0"
       }
     ]
   },

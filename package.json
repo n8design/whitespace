@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gulp bundle",
     "clean": "gulp clean",
+    "preversion": "node ./tools/post-version.js",
     "test": "./node_modules/.bin/jest --config ./config/jest.config.json",
     "test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
   },
