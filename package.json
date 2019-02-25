@@ -1,6 +1,6 @@
 {
   "name": "whitespace",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": ">=0.10.0"
@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gulp bundle",
     "clean": "gulp clean",
+    "preversion": "node ./tools/pre-version.js",
     "test": "./node_modules/.bin/jest --config ./config/jest.config.json",
     "test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
   },
@@ -20,8 +21,8 @@
     "@types/react": "16.4.2",
     "@types/react-dom": "16.0.5",
     "@types/webpack-env": "1.13.1",
-    "react": "16.3.3",
-    "react-dom": "16.3.3"
+    "react": "16.3.0",
+    "react-dom": "16.4.2"
   },
   "resolutions": {
     "@types/react": "16.4.2"

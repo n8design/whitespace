@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="N8DWhiteSpaceApplicationCustomizer"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="78478cf9-373a-4b36-950c-ce02224fc0c3"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;,&quot;CSSOverrideUrl&quot;:&quot;https://n8design.github.io/whitespace/blacklist.css&quot;}"
+        >
+    </ClientSideComponentInstance>
+</Elements>
