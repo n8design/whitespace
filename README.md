@@ -1,6 +1,9 @@
-## whitespace
+## Whitepace - Regain distraction-free working in SharePoint 
 
-This is where you include your WebPart documentation.
+This application customiser removes "Mobile App" and "Teams" information from any Team and communication iste in SharePoint.
+
+![Whitespace Logo](docs/assets/whitespace.jpg)
+
 
 ### Building the code
 
