@@ -4,13 +4,10 @@
 
     // remove simple footer advertising
     div[data-automationid="SimpleFooter"] {
-        display: none;
+        display: none !important;
+        background-color: lime !important;
     }
 
     div[class*="teamifyBanner"] {
         display: none;
     }
-
-.SPPageChrome{
-background-color: lime;
-}
