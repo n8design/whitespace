@@ -53,6 +53,7 @@ export default class N8DWhiteSpaceApplicationCustomizer
   private _renderPlaceHolders(): void {
 
     // SPComponentLoader.loadCss('https://n8design.github.io/whitespace/blacklist.css');
+
     SPComponentLoader.loadCss(this.properties.CSSOverrideUrl);
     // SPComponentLoader.loadCss('https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 
