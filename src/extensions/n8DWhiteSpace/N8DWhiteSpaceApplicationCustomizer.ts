@@ -14,7 +14,7 @@ import { SPComponentLoader } from '@microsoft/sp-loader';
 const LOG_SOURCE: string = 'N8DWhiteSpaceApplicationCustomizer';
 
 import styles from './N8DWhiteSpaceApplicationCustomizer.module.scss';
-import { escape } from '@microsoft/sp-lodash-subset';
+// import { escape } from '@microsoft/sp-lodash-subset';
 
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
@@ -23,6 +23,8 @@ import { escape } from '@microsoft/sp-lodash-subset';
  */
 export interface IN8DWhiteSpaceApplicationCustomizerProperties {
   Bottom: string;
+  CSSOverrideUrl: string;
+  testMessage: string;
 }
 
 
@@ -42,8 +44,6 @@ export default class N8DWhiteSpaceApplicationCustomizer
   public onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-
-
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
 
     return Promise.resolve();
@@ -52,7 +52,8 @@ export default class N8DWhiteSpaceApplicationCustomizer
 
   private _renderPlaceHolders(): void {
 
-    SPComponentLoader.loadCss('https://n8design.github.io/whitespace/blacklist.css');
+    // SPComponentLoader.loadCss('https://n8design.github.io/whitespace/blacklist.css');
+    SPComponentLoader.loadCss(this.properties.CSSOverrideUrl);
     // SPComponentLoader.loadCss('https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 
     // Handling the bottom placeholder
@@ -84,6 +85,6 @@ export default class N8DWhiteSpaceApplicationCustomizer
   }
 
   private _onDispose(): void {
-    console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
+
   }
 }

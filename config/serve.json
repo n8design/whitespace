@@ -9,7 +9,8 @@
         "78478cf9-373a-4b36-950c-ce02224fc0c3": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "testMessage": "Test message",
+            "CSSOverrideUrl": "https://n8design.github.io/whitespace/blacklist.css"
           }
         }
       }
@@ -20,7 +21,8 @@
         "78478cf9-373a-4b36-950c-ce02224fc0c3": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "testMessage": "Test message",
+            "CSSOverrideUrl": "https://n8design.github.io/whitespace/blacklist.css"
           }
         }
       }
