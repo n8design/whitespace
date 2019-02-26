@@ -8,7 +8,7 @@ This application customiser removes "Mobile App" and "Teams" information from an
 
 This solution uses CSS injection on modern experience pages and hide elements from Communication and Teamsite. The CSS provided by this solution are served via this GitHub page and will be directly injected from the web using the following URL: https://n8design.github.io/whitespace/blacklist.css
 
-This demo extension should not be used under any cerciumstanced in any production enviroment.
+This demo extension should not be used under any circumstances in any production environment. It you still use it it is at your own risk.
 
 ### Elements remove by this solution
 
@@ -50,3 +50,5 @@ Edit the entry 'N8DWhiteSpaceApplicationCustomizer'
 ```
 
 Modify the CSSOverrideUrl property and save the entry.
+
+
