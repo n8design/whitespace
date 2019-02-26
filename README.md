@@ -25,25 +25,28 @@ This demo extension should not be used under any cerciumstanced in any productio
 ![Mobile app](docs/assets/mobile-app-bold-footer.png)
 
 
-### Building the code
+### Download this solution
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
+To downloade this solution please check out the the [release page](https://github.com/n8design/whitespace/releases).
+
+### Installation
+
+To install this solution please follow [this instructions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page#deploy-the-helloworld-package-to-app-catalog).
+
+### Configuration
+
+This solution also allows to modify the default location the CSS is servers from. To modify this setting navigate to tenant wide app catalog and to the tenant wide extension list.
+
+![Tenant wide application catalog](docs/assets/tenant-wide-extensions.png)
+
+Edit the entry 'N8DWhiteSpaceApplicationCustomizer'
+
+![Edit component properties](docs/assets/edit-component-properties.png)
+
+```js
+{
+  "CSSOverrideUrl":"https://n8design.github.io/whitespace/blacklist.css"
+}
 ```
 
-This package produces the following:
-
-* lib/* - intermediate-stage commonjs build artifacts
-* dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
-
-### Build options
-
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+Modify the CSSOverrideUrl property and save the entry.
